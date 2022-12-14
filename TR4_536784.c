@@ -1,7 +1,12 @@
+
+// incluindo a nossa biblioteca
+
 #include "ordvetor.h"
 
 //Aluno: alan victor soares vieira 
 //matricula: 536784
+
+//criacao e alocacao de memoria para uma nova struct
 
 VETORORD* VETORD_create(int n, COMP* compara) {
 	VETORORD* vetor = malloc(sizeof(VETORORD));
@@ -11,6 +16,8 @@ VETORORD* VETORD_create(int n, COMP* compara) {
 	vetor->comparador = compara;
 	return vetor;
 }
+
+// metodo para adicionar e verificar um valor
 
 void VETORD_add(VETORORD* vetor, void* newelem) {
 	if (vetor->P < vetor->N) {
@@ -33,6 +40,7 @@ void VETORD_add(VETORORD* vetor, void* newelem) {
 }
 
 
+//metodo de remocao
 
 void* VETORD_remove(VETORORD* vetor) {
 	void* menor = vetor->elems[0];
