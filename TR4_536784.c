@@ -32,6 +32,8 @@ void VETORD_add(VETORORD* vetor, void* newelem) {
 	}	
 }
 
+
+
 void* VETORD_remove(VETORORD* vetor) {
 	void* menor = vetor->elems[0];
 
